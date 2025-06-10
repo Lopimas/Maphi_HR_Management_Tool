@@ -14,7 +14,7 @@ public class Maphi_HR_Management_Tool extends JFrame {
     private JTextField textField3;
     private JTextField textField4;
 
-    public Maphi_HR_Management_Tool(){
+    public Maphi_HR_Management_Tool(){     //Konstruktor des Fensters
         setTitle("HR Management Tool");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1920,1080);
