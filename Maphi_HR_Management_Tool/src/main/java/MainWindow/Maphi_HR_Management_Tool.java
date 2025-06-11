@@ -4,8 +4,8 @@ import javax.swing.*;
 
 public class Maphi_HR_Management_Tool extends JFrame {
     private JPanel myPanel;
-    private JTextField NamenTextFeld;
-    private JTextField textField1;
+    private JTextField Name_TextField;
+    private JTextField Nachname_textField;
     private JRadioButton männlichRadioButton;
     private JRadioButton weiblichRadioButton;
     private JRadioButton diversRadioButton;
