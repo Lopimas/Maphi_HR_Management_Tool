@@ -13,6 +13,7 @@ public class Maphi_HR_Management_Tool extends JFrame {
     private JTextField textField2;
     private JTextField textField3;
     private JTextField textField4;
+    private JList mitarbeiterListe;
 
     public Maphi_HR_Management_Tool(){     //Konstruktor des Fensters
         setTitle("HR Management Tool");
@@ -24,6 +25,8 @@ public class Maphi_HR_Management_Tool extends JFrame {
     }
 
     public static void main(String[] args) {
+
         new Maphi_HR_Management_Tool();
+
     }
 }
