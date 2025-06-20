@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="MainWindow.Maphi_HR_Management_Tool">
-  <grid id="27dc6" binding="myPanel" layout-manager="GridLayoutManager" row-count="7" column-count="9" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="myPanel" layout-manager="GridLayoutManager" row-count="10" column-count="9" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="20" left="20" bottom="20" right="20"/>
     <constraints>
-      <xy x="18" y="81" width="1339" height="520"/>
+      <xy x="18" y="81" width="1620" height="590"/>
     </constraints>
     <properties>
       <background color="-7299406"/>
@@ -12,7 +12,7 @@
     <children>
       <component id="a964f" class="javax.swing.JLabel">
         <constraints>
-          <grid row="0" column="8" row-span="4" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="8" row-span="5" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <icon value="Logo.gif"/>
@@ -50,7 +50,7 @@
       </component>
       <component id="6f7ab" class="javax.swing.JLabel">
         <constraints>
-          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font name="Berlin Sans FB" size="26"/>
@@ -60,7 +60,7 @@
       </component>
       <component id="fc434" class="javax.swing.JLabel">
         <constraints>
-          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="5" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font name="Berlin Sans FB" size="26"/>
@@ -68,7 +68,7 @@
           <text value="Geburtsdatum:"/>
         </properties>
       </component>
-      <component id="983b7" class="javax.swing.JTextField" binding="Name_TextField">
+      <component id="983b7" class="javax.swing.JTextField" binding="name_TextField">
         <constraints>
           <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="174" height="37"/>
@@ -81,40 +81,30 @@
           <margin top="2" left="9" bottom="2" right="6"/>
         </properties>
       </component>
-      <grid id="68d76" layout-manager="GridLayoutManager" row-count="1" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="68d76" binding="datumPanel" layout-manager="GridLayoutManager" row-count="1" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="2" column="3" row-span="1" col-span="3" vsize-policy="3" hsize-policy="0" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="3" row-span="1" col-span="3" vsize-policy="1" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-7957336"/>
         </properties>
         <border type="none"/>
         <children>
-          <component id="f0baa" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+          <component id="f0baa" class="javax.swing.JTextField" binding="tageTextfeld">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="75" height="-1"/>
+                <preferred-size width="35" height="-1"/>
               </grid>
             </constraints>
             <properties>
               <font name="Berlin Sans FB" size="26"/>
             </properties>
           </component>
-          <component id="b0f60" class="javax.swing.JTextField" binding="textField3" default-binding="true">
-            <constraints>
-              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="75" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <font name="Berlin Sans FB" size="26"/>
-            </properties>
-          </component>
-          <component id="17f13" class="javax.swing.JTextField" binding="textField4" default-binding="true">
+          <component id="17f13" class="javax.swing.JTextField" binding="jahreTextfeld">
             <constraints>
               <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="100" height="-1"/>
+                <preferred-size width="65" height="-1"/>
               </grid>
             </constraints>
             <properties>
@@ -141,83 +131,23 @@
               <text value="."/>
             </properties>
           </component>
-        </children>
-      </grid>
-      <component id="ff2a7" class="javax.swing.JButton" binding="speicherButton">
-        <constraints>
-          <grid row="4" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Speichern"/>
-        </properties>
-      </component>
-      <grid id="d1d96" binding="listPanel" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="0" left="0" bottom="0" right="0"/>
-        <constraints>
-          <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties/>
-        <border type="none"/>
-        <children>
-          <component id="ede1a" class="javax.swing.JLabel">
+          <component id="b0f60" class="javax.swing.JTextField" binding="monatTextfeld">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="100" height="-1"/>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="35" height="-1"/>
               </grid>
             </constraints>
             <properties>
-              <horizontalAlignment value="2"/>
-              <text value="Name, Nachname"/>
-            </properties>
-          </component>
-          <component id="1620d" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="100" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <horizontalAlignment value="2"/>
-              <text value="Abteilung"/>
-            </properties>
-          </component>
-          <component id="2ad98" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="100" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <horizontalAlignment value="2"/>
-              <text value="Alter"/>
-            </properties>
-          </component>
-          <component id="5fec0" class="javax.swing.JList" binding="list1" default-binding="true">
-            <constraints>
-              <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="50"/>
-              </grid>
-            </constraints>
-            <properties>
-              <model>
-                <item value="dawd"/>
-                <item value="dawda"/>
-                <item value="dawdawd"/>
-              </model>
+              <font name="Berlin Sans FB" size="26"/>
             </properties>
           </component>
         </children>
       </grid>
       <hspacer id="389a7">
         <constraints>
-          <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="9" column="6" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
       </hspacer>
-      <vspacer id="ef755">
-        <constraints>
-          <grid row="6" column="3" row-span="1" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-        </constraints>
-      </vspacer>
       <hspacer id="d8ef7">
         <constraints>
           <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
@@ -226,9 +156,11 @@
       <grid id="299b2" binding="geschlechtPanel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-7299406"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="ad5b7" class="javax.swing.JRadioButton" binding="männlichRadioButton" default-binding="true">
@@ -236,6 +168,9 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-7299406"/>
+              <font name="Berlin Sans FB" size="20"/>
+              <foreground color="-16376311"/>
               <selected value="false"/>
               <text value="männlich"/>
             </properties>
@@ -245,6 +180,9 @@
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-7299406"/>
+              <font name="Berlin Sans FB" size="20"/>
+              <foreground color="-16376311"/>
               <text value="weiblich"/>
             </properties>
           </component>
@@ -253,11 +191,234 @@
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-7299406"/>
+              <font name="Berlin Sans FB" size="20"/>
+              <foreground color="-16376311"/>
               <text value="divers"/>
             </properties>
           </component>
         </children>
       </grid>
+      <component id="3ace6" class="javax.swing.JTextField" binding="nachname_TextField">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="174" height="37"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-2424836"/>
+          <columns value="1"/>
+          <font name="Berlin Sans FB" size="24"/>
+          <margin top="2" left="9" bottom="2" right="6"/>
+        </properties>
+      </component>
+      <component id="a17df" class="javax.swing.JComboBox" binding="abteilungComboBox">
+        <constraints>
+          <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value=""/>
+            <item value="HR - Human Resources"/>
+            <item value="F  - Finanzen"/>
+            <item value="IT - Informations Technik"/>
+            <item value="P  - Production"/>
+            <item value="MA - Marketing"/>
+          </model>
+        </properties>
+      </component>
+      <component id="ff2a7" class="javax.swing.JButton" binding="speicherButton">
+        <constraints>
+          <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Speichern"/>
+        </properties>
+      </component>
+      <grid id="8af4" binding="mitarbeiterlistenPanel" layout-manager="GridLayoutManager" row-count="2" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="6" column="3" row-span="3" col-span="4" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="d901" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Name, Nachname"/>
+            </properties>
+          </component>
+          <component id="50953" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Stundenlohn"/>
+            </properties>
+          </component>
+          <component id="b3207" class="javax.swing.JTextArea" binding="nameTextArea">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <editable value="false"/>
+              <enabled value="true"/>
+            </properties>
+          </component>
+          <component id="823ef" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Alter"/>
+            </properties>
+          </component>
+          <component id="e4d6c" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Familienstand"/>
+            </properties>
+          </component>
+          <component id="5849e" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Abteilung"/>
+            </properties>
+          </component>
+          <component id="d1583" class="javax.swing.JTextArea" binding="alterTextArea">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <editable value="false"/>
+              <enabled value="true"/>
+            </properties>
+          </component>
+          <component id="eb16e" class="javax.swing.JTextArea" binding="familienstandTextArea">
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <editable value="false"/>
+              <enabled value="true"/>
+            </properties>
+          </component>
+          <component id="16827" class="javax.swing.JTextArea" binding="abteilungTextArea">
+            <constraints>
+              <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <editable value="false"/>
+            </properties>
+          </component>
+          <component id="b9bb1" class="javax.swing.JTextArea" binding="stundenlohnTextArea">
+            <constraints>
+              <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <editable value="false"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="a2162" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="5" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Berlin Sans FB" size="26"/>
+          <foreground color="-16376311"/>
+          <text value="Stundenlohn:"/>
+        </properties>
+      </component>
+      <component id="d75b2" class="javax.swing.JTextField" binding="stundenlohnTextField">
+        <constraints>
+          <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="174" height="37"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-2424836"/>
+          <columns value="1"/>
+          <font name="Berlin Sans FB" size="24"/>
+          <margin top="2" left="9" bottom="2" right="6"/>
+        </properties>
+      </component>
+      <grid id="2e685" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-7299406"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="6ce0f" class="javax.swing.JRadioButton" binding="verheiratetRadioButton">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-7299406"/>
+              <font name="Berlin Sans FB" size="20"/>
+              <foreground color="-16376311"/>
+              <selected value="false"/>
+              <text value="verheiratet"/>
+            </properties>
+          </component>
+          <component id="4508a" class="javax.swing.JRadioButton" binding="ledigRadioButton">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-7299406"/>
+              <font name="Berlin Sans FB" size="20"/>
+              <foreground color="-16376311"/>
+              <text value="ledig"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="d2194" class="javax.swing.JButton" binding="berechneDurchschnittlichenStundenlohnButton" default-binding="true">
+        <constraints>
+          <grid row="6" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Berechne Durchschnittlichen Stundenlohn"/>
+        </properties>
+      </component>
+      <component id="853cb" class="javax.swing.JLabel" binding="durchschnittLabel">
+        <constraints>
+          <grid row="7" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Berlin Sans FB" size="24"/>
+          <foreground color="-16376311"/>
+          <text value="0,00"/>
+        </properties>
+      </component>
+      <vspacer id="5354">
+        <constraints>
+          <grid row="8" column="7" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
     </children>
   </grid>
 </form>

@@ -27,7 +27,7 @@ public class Mitarbeiter {
     public int berechneAlter(){
         Calendar c = Calendar.getInstance(); //legt ein Calender Objekt an
         int bAlter = c.get(Calendar.YEAR) - geburtsdatum[2]; //berechnet Alter in Jahren
-        if (c.get(Calendar.DAY_OF_MONTH) > geburtsdatum[0] && c.get(Calendar.MONTH) > geburtsdatum[1]) bAlter = bAlter - 1; //zieht 1 Jahr ab bei nicht vergangenem Geburtstag
+        if (c.get(Calendar.DAY_OF_MONTH) < geburtsdatum[0] && c.get(Calendar.MONTH) == geburtsdatum[1] || c.get(Calendar.MONTH)< geburtsdatum[1]) bAlter = bAlter - 1; //zieht 1 Jahr ab bei nicht vergangenem Geburtstag
         return bAlter; //gibt das alter zurück
     }
     public Mitarbeiter(int geburtsdatum[], String abteilung, boolean verheitatet, String geschlecht, double stundenlohn, String[] name) { //Konstruktor der Mitarbeiter Klasse
