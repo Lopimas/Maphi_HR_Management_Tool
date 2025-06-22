@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class Maphi_HR_Management_Tool extends JFrame {
+public class Maphi_HR_Management_Tool extends JFrame { //JFrame Elemente unseres UI Fesnters Maphi_HR_Management_Tool
     private JPanel myPanel;
     private JTextField name_TextField;
     private JRadioButton männlichRadioButton;
@@ -74,9 +74,9 @@ public class Maphi_HR_Management_Tool extends JFrame {
                 ledigRadioButton.setSelected(false);
             }
         });
-        speicherButton.addActionListener(new ActionListener() {
+        speicherButton.addActionListener(new ActionListener() { //SpeicherButton um Eingaben zu speichern
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e) { //Actionlistener für den Speicher Button mit Try-Catch um Eingabefehler zu vermeiden
                 try{
                     String vorname;
                     String nachname;
@@ -108,21 +108,21 @@ public class Maphi_HR_Management_Tool extends JFrame {
                     } else if (verheiratetRadioButton.isSelected()) {
                         verheiratet = true;
                     } else verheiratet = false;
-                    if(!(männlichRadioButton.isSelected() || weiblichRadioButton.isSelected() || diversRadioButton.isSelected())){
+                    if(!(männlichRadioButton.isSelected() || weiblichRadioButton.isSelected() || diversRadioButton.isSelected())){ //checkt ob mindestens ein radiobutton geklickt ist
                         throw new Exception("kein Geschlecht geht schlecht ; ) !");
                     }else if (männlichRadioButton.isSelected()) geschlecht = "männlich";
                      else if (weiblichRadioButton.isSelected()) geschlecht = "weiblich";
                      else geschlecht = "divers";
-                     if(Double.parseDouble(stundenlohnTextField.getText())>= 13.0){
+                     if(Double.parseDouble(stundenlohnTextField.getText())>= 13.0){ //String von stundenlohnTextField wird in Double umgewandelt, was gleichzeitig checkt ob es eine Zahl ist
                          stundenlohn = Double.parseDouble(stundenlohnTextField.getText());
                      }else throw new Exception("Stundenlohn ungültig! Beachte Mindestlohn von 13€!");
                      namearr = name_TextField.getText().toCharArray();
-                     for (char i: namearr) {
+                     for (char i: namearr) { // chararray namearr wird durchiterriert und auf nicht aplhabetische Zeichen geprüft
                          if (!Character.isAlphabetic(i)) throw new Exception("keine Zahlen oder sonderzeichen!");
                      }
                      vorname = name_TextField.getText();
                      nachnamearr = nachname_TextField.getText().toCharArray();
-                     for (char i: nachnamearr){
+                     for (char i: nachnamearr){ // chararray nachnamearr wird durchiterriert und auf nicht aplhabetische Zeichen geprüft
                          if (!Character.isAlphabetic(i)) throw new Exception("keine Zahlen oder sonderzeichen!");
                      }
                      nachname = nachname_TextField.getText();
@@ -138,7 +138,7 @@ public class Maphi_HR_Management_Tool extends JFrame {
                 }
             }
         });
-        berechneDurchschnittlichenStundenlohnButton.addActionListener(new ActionListener() {
+        berechneDurchschnittlichenStundenlohnButton.addActionListener(new ActionListener() { //berechnet Durschnittslohn aller gespeicherten Mitarbeiter
             @Override
             public void actionPerformed(ActionEvent e) {
                 double durchschnitt = 0.0;
@@ -149,7 +149,7 @@ public class Maphi_HR_Management_Tool extends JFrame {
             }
         });
     }
-    public void clearInput(){
+    public void clearInput(){ //setzt alle Textfelder, Buttons und Radiobuttons auf 0 zurück
         name_TextField.setText("");
         nachname_TextField.setText("");
         weiblichRadioButton.setSelected(false);
@@ -165,7 +165,7 @@ public class Maphi_HR_Management_Tool extends JFrame {
 
     }
     public void addtoList(){ //Methode zum anzeigen der Mitarbeiter in der Liste
-        nameTextArea.setText("");           //hier wird die alter liste gelöscht und neu geschrieben
+        nameTextArea.setText("");           //hier wird die Alter liste gelöscht und neu geschrieben
         alterTextArea.setText("");
         familienstandTextArea.setText("");
         abteilungTextArea.setText("");
@@ -182,7 +182,7 @@ public class Maphi_HR_Management_Tool extends JFrame {
             stundenlohnTextArea.setText(stundenlohnTextArea.getText() + String.valueOf(a.stundenlohn) + "\n");
         }
     }
-    public void initObjekte(){
+    public void initObjekte(){ //initialisiert Objekte
         mitarbeiterDaten = new ArrayList();
         mitarbeiterDaten.add(new Mitarbeiter(new int[]{11,7,2001}, "IT - Informations Technik", false, "männlich", 13.0, new String[]{"Phillip","Krahn"}));
         mitarbeiterDaten.add(new Mitarbeiter(new int[]{20,6,2003}, "F  - Finanzen", false, "männlich", 15.0, new String[]{"Marvin","Beck"}));
