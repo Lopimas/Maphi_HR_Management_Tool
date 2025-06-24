@@ -30,6 +30,7 @@ public class Maphi_HR_Management_Tool extends JFrame {
     private JTextArea stundenlohnTextArea;
     private JButton berechneDurchschnittlichenStundenlohnButton;
     private JLabel durchschnittLabel;
+    private JComboBox filterComboBox;
     private ArrayList<Mitarbeiter> mitarbeiterDaten;
 
 
@@ -148,6 +149,17 @@ public class Maphi_HR_Management_Tool extends JFrame {
                 durchschnittLabel.setText(String.valueOf(durchschnitt / mitarbeiterDaten.size()));
             }
         });
+        filterComboBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            if (filterComboBox.getSelectedItem().toString().isEmpty()){
+                addtoList();
+            }else
+            {
+             addtoList(filterComboBox.getSelectedItem().toString());
+            }
+            }
+        });
     }
     public void clearInput(){
         name_TextField.setText("");
@@ -182,6 +194,27 @@ public class Maphi_HR_Management_Tool extends JFrame {
             stundenlohnTextArea.setText(stundenlohnTextArea.getText() + String.valueOf(a.stundenlohn) + "\n");
         }
     }
+    public void addtoList(String abteilung){ //die überladene Methode zum anzeigen der Mitarbeiter in der Liste, für die Filterung
+        nameTextArea.setText("");           //hier wird die alter liste gelöscht und neu geschrieben
+        alterTextArea.setText("");
+        familienstandTextArea.setText("");
+        abteilungTextArea.setText("");
+        stundenlohnTextArea.setText("");
+
+        for (Mitarbeiter a: mitarbeiterDaten) {
+            if (abteilung.equals(a.abteilung)) {
+                nameTextArea.setText(nameTextArea.getText() + a.name[0] + ", " + a.name[1] + "\n");
+                alterTextArea.setText(alterTextArea.getText() + String.valueOf(a.getAlter()) + "\n");
+                if (a.verheitatet == false)
+                    familienstandTextArea.setText(familienstandTextArea.getText() + "ledig" + "\n");
+                else
+                    familienstandTextArea.setText(familienstandTextArea.getText() + "verheiratet" + "\n");
+                abteilungTextArea.setText(abteilungTextArea.getText() + a.abteilung + "\n");
+                stundenlohnTextArea.setText(stundenlohnTextArea.getText() + String.valueOf(a.stundenlohn) + "\n");
+            }
+        }
+    }
+
     public void initObjekte(){
         mitarbeiterDaten = new ArrayList();
         mitarbeiterDaten.add(new Mitarbeiter(new int[]{11,7,2001}, "IT - Informations Technik", false, "männlich", 13.0, new String[]{"Phillip","Krahn"}));
