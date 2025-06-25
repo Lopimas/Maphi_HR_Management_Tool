@@ -91,7 +91,24 @@ public class Maphi_HR_Management_Tool extends JFrame {
                     double stundenlohn;
                     char[] namearr = new char[name_TextField.getText().length()];
                     char[] nachnamearr = new char[nachname_TextField.getText().length()];
-
+                    char[] checkDigitsTagarr = new char[tageTextfeld.getText().length()];
+                    char[] checkDigitsMonatarr = new char[monatTextfeld.getText().length()];
+                    char[] checkDigitsJahrarr = new char[jahreTextfeld.getText().length()];
+                    if(!stundenlohnTextField.getText().matches("^\\d+(\\.\\d{1,2})?$"))throw new Exception("Keine Buchstaben oder Sonderzeichen beim Stundenlohn");//Hier haben wir eine Matchabfrage mithilfe von Regex getätigt, um sicherzustellen, dass der Stundenlohn eine Zahl ist,
+                                                                                                                                                                        // und optional noch ein '.' und maximal 2 Kommastellen erlaubt sind
+                    checkDigitsTagarr = tageTextfeld.getText().toCharArray();
+                    checkDigitsMonatarr = monatTextfeld.getText().toCharArray();
+                    checkDigitsJahrarr = jahreTextfeld.getText().toCharArray();
+                    for (char index: checkDigitsTagarr){
+                        if (!Character.isDigit(index))throw new Exception("Keine Buchstaben oder Sonderzeichen beim Tag");
+                    }
+                    for (char index: checkDigitsMonatarr){
+                        if (!Character.isDigit(index))throw new Exception("Keine Buchstaben oder Sonderzeichen beim Monat");
+                    }
+                    for (char index: checkDigitsJahrarr){
+                        if (!Character.isDigit(index))throw new Exception("Keine Buchstaben oder Sonderzeichen beim Jahr");
+                    }
+                    for (char index: checkDigitsJahrarr)
                     if (tageTextfeld.getText().isEmpty()||monatTextfeld.getText().isEmpty()||jahreTextfeld.getText().isEmpty()||name_TextField.getText().isEmpty()||nachname_TextField.getText().isEmpty()||stundenlohnTextField.getText().isEmpty())throw new Exception("Bitte alle Felder ausfüllen!");
                     if(Integer.parseInt(tageTextfeld.getText()) <= 31 && Integer.parseInt(tageTextfeld.getText()) >= 1){
                         tag = Integer.parseInt(tageTextfeld.getText());
