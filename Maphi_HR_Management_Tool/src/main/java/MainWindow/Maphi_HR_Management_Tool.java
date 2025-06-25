@@ -108,8 +108,7 @@ public class Maphi_HR_Management_Tool extends JFrame {
                     for (char index: checkDigitsJahrarr){
                         if (!Character.isDigit(index))throw new Exception("Keine Buchstaben oder Sonderzeichen beim Jahr");
                     }
-                    for (char index: checkDigitsJahrarr)
-                    if (tageTextfeld.getText().isEmpty()||monatTextfeld.getText().isEmpty()||jahreTextfeld.getText().isEmpty()||name_TextField.getText().isEmpty()||nachname_TextField.getText().isEmpty()||stundenlohnTextField.getText().isEmpty())throw new Exception("Bitte alle Felder ausfüllen!");
+                        if (tageTextfeld.getText().isEmpty()||monatTextfeld.getText().isEmpty()||jahreTextfeld.getText().isEmpty()||name_TextField.getText().isEmpty()||nachname_TextField.getText().isEmpty()||stundenlohnTextField.getText().isEmpty())throw new Exception("Bitte alle Felder ausfüllen!");
                     if(Integer.parseInt(tageTextfeld.getText()) <= 31 && Integer.parseInt(tageTextfeld.getText()) >= 1){
                         tag = Integer.parseInt(tageTextfeld.getText());
                     }else throw new Exception("Eingabe ungültig");
