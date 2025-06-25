@@ -31,6 +31,7 @@ public class Maphi_HR_Management_Tool extends JFrame {
     private JButton berechneDurchschnittlichenStundenlohnButton;
     private JLabel durchschnittLabel;
     private JComboBox filterComboBox;
+    private JLabel filterLabel;
     private ArrayList<Mitarbeiter> mitarbeiterDaten;
 
 
@@ -91,7 +92,7 @@ public class Maphi_HR_Management_Tool extends JFrame {
                     char[] namearr = new char[name_TextField.getText().length()];
                     char[] nachnamearr = new char[nachname_TextField.getText().length()];
 
-
+                    if (tageTextfeld.getText().isEmpty()||monatTextfeld.getText().isEmpty()||jahreTextfeld.getText().isEmpty()||name_TextField.getText().isEmpty()||nachname_TextField.getText().isEmpty()||stundenlohnTextField.getText().isEmpty())throw new Exception("Bitte alle Felder ausfüllen!");
                     if(Integer.parseInt(tageTextfeld.getText()) <= 31 && Integer.parseInt(tageTextfeld.getText()) >= 1){
                         tag = Integer.parseInt(tageTextfeld.getText());
                     }else throw new Exception("Eingabe ungültig");
@@ -135,7 +136,10 @@ public class Maphi_HR_Management_Tool extends JFrame {
                     addtoList();
                     clearInput();
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(null, "Eingabe ungültig, bitte eingegebene Daten nochmal überprüfen!");
+                    if(ex.getMessage().isEmpty()){
+                        JOptionPane.showMessageDialog(null, "Eingabe ungültig! Bitte alle felder ausfüllen!");
+                    }
+                    JOptionPane.showMessageDialog(null, ex.getMessage());
                 }
             }
         });
