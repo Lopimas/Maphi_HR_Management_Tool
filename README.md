@@ -14,3 +14,5 @@ Das Tool wurde im Rahmen einer Programmiertechnik Projektarbeit erstellt.
   - Stundenlohn
 -  **Filterfunktion** nach Abteilungen
 -  **Durchschnittsberechnung** des Stundenlohns aller Mitarbeiter per Button
+
+Eine Projektarbeit von Marvin Beck, Phillip Krahn und Niklas Borski
